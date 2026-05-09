@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mehmet Luxury Drive</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background:#000;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      padding:20px 60px;
+      backdrop-filter: blur(20px);
+      background:rgba(0,0,0,0.5);
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      font-size:24px;
+      font-weight:600;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      opacity:0.8;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      opacity:1;
+    }
+
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000') center/cover;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero-content{
+      background:rgba(0,0,0,0.45);
+      padding:50px;
+      border-radius:30px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero h2{
+      font-size:70px;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .hero p{
+      font-size:24px;
+      opacity:0.9;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:16px 40px;
+      border-radius:40px;
+      background:white;
+      color:black;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+
+    .section{
+      padding:120px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:50px;
+      margin-bottom:60px;
+    }
+
+    .cars{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#111;
+      border-radius:30px;
+      overflow:hidden;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:25px;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      opacity:0.7;
+      line-height:1.6;
+    }
+
+    .booking{
+      text-align:center;
+      background:#111;
+      border-radius:40px;
+      padding:70px 30px;
+    }
+
+    .booking h2{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .booking p{
+      opacity:0.8;
+      margin-bottom:40px;
+      font-size:20px;
+    }
+
+    form{
+      max-width:600px;
+      margin:auto;
+    }
+
+    input, textarea{
+      width:100%;
+      padding:18px;
+      margin-bottom:20px;
+      border:none;
+      border-radius:20px;
+      background:#1c1c1e;
+      color:white;
+      font-size:16px;
+    }
+
+    button{
+      width:100%;
+      padding:18px;
+      border:none;
+      border-radius:20px;
+      background:white;
+      color:black;
+      font-size:18px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.02);
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      opacity:0.5;
+    }
+
+    @media(max-width:768px){
+
+      .hero h2{
+        font-size:45px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      header{
+        padding:20px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>Mehmet Luxury</h1>
+
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Cars</a>
+      <a href="#">Booking</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div class="hero-content">
+    <h2>Buche Mehmet</h2>
+    <p>Luxus. Stil. Exklusive Fahrten.</p>
+
+    <a href="#booking" class="btn">Jetzt buchen</a>
+  </div>
+
+</section>
+
+<section class="section">
+
+  <h2 class="section-title">Luxury Cars</h2>
+
+  <div class="cars">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1600">
+
+      <div class="card-content">
+        <h3>Lamborghini</h3>
+        <p>Pure Geschwindigkeit und Luxus auf höchstem Niveau.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1600">
+
+      <div class="card-content">
+        <h3>Ferrari</h3>
+        <p>Italienisches Design kombiniert mit extremer Leistung.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600">
+
+      <div class="card-content">
+        <h3>Rolls Royce</h3>
+        <p>Eleganz und Komfort für besondere Momente.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section" id="booking">
+
+  <div class="booking">
+
+    <h2>Mehmet buchen</h2>
+
+    <p>Kontaktiere uns für exklusive Fahrten & VIP-Service.</p>
+
+    <form>
+
+      <input type="text" placeholder="Dein Name">
+
+      <input type="email" placeholder="Deine E-Mail">
+
+      <textarea rows="5" placeholder="Nachricht"></textarea>
+
+      <button type="submit">Anfrage senden</button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Mehmet Luxury Drive
+</footer>
+
+</body>
+</html>
